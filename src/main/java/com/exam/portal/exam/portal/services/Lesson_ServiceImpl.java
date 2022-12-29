@@ -37,4 +37,9 @@ public class Lesson_ServiceImpl implements Lesson_Service {
 		return HttpStatus.OK.toString();
 	}
 
+	@Override
+	public Lesson findLesson(Integer id) {
+		return lesson_repository.findLessonById(id);
+	}
+
 }

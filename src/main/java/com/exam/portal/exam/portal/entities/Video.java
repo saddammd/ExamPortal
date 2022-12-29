@@ -11,6 +11,11 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
   
   
   @Entity
@@ -27,10 +32,12 @@ import javax.persistence.TemporalType;
   private String url;
   
   
-  @Temporal(TemporalType.DATE) 
+  @CreationTimestamp
+  @Temporal(TemporalType.DATE)
   private Date createdDate;
   
-  @Temporal(TemporalType.DATE) 
+  @UpdateTimestamp
+  @Temporal(TemporalType.DATE)
   private Date updatedDate;
   
   @ManyToOne
@@ -90,7 +97,7 @@ public Date getUpdatedDate() {
 public void setUpdatedDate(Date updatedDate) {
 	this.updatedDate = updatedDate;
 }
-
+@JsonBackReference
 public Lesson getLesson() {
 	return lesson;
 }

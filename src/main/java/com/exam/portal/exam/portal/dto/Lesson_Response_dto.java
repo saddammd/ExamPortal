@@ -8,6 +8,7 @@ import com.exam.portal.exam.portal.entities.Mcq;
 import com.exam.portal.exam.portal.entities.Reading;
 import com.exam.portal.exam.portal.entities.Video;
 import com.exam.portal.exam.portal.entities.Vocabulary;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 public class Lesson_Response_dto {
 	

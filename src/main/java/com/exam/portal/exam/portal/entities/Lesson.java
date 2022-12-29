@@ -13,6 +13,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 
 @Entity
 @Table(name="lesson")
@@ -83,6 +85,7 @@ public class Lesson {
 		this.name = name;
 	}
 	
+	@JsonManagedReference
 	public List<Video> getVideo() {
 		return video;
 	}
