@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
   
   @Entity
   @Table(name="vocabulary") 
@@ -32,6 +34,7 @@ import javax.persistence.TemporalType;
   
   @ManyToOne
   @JoinColumn(name = "lesson_id")
+  @JsonBackReference
   private Lesson lesson;
   
   @Temporal(TemporalType.DATE) 

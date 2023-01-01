@@ -18,4 +18,16 @@ public class Video_ServiceImpl implements Video_Service {
 		return video_repository.save(video);
 	}
 
+	@Override
+	public Video findVideo(Integer videoId) {
+		
+		return video_repository.findVideoById(videoId);
+	}
+
+	@Override
+	public String deleteVideo(Video video) {
+		video_repository.delete(video);
+		return "Video Deleted Successfully";
+	}
+
 }

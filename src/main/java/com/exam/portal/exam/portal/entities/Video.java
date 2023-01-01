@@ -42,6 +42,7 @@ import com.fasterxml.jackson.annotation.JsonBackReference;
   
   @ManyToOne
   @JoinColumn(name = "lesson_id")
+  @JsonBackReference
   private Lesson lesson;
 
 public Video() {

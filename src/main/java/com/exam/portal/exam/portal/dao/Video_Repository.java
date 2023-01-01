@@ -6,4 +6,6 @@ import com.exam.portal.exam.portal.entities.Video;
 
 public interface Video_Repository extends JpaRepository<Video, Integer> {
 
+	public Video findVideoById(Integer videoId);
+
 }

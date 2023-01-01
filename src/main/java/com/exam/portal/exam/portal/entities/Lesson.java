@@ -29,18 +29,23 @@ public class Lesson {
 	private String name;
 	
 	@OneToMany(mappedBy = "lesson")
+	@JsonManagedReference
 	private List<Video> video;
 	
 	@OneToMany(mappedBy = "lesson")
+	@JsonManagedReference
 	private List<Mcq> mcq;
 	
 	@OneToMany(mappedBy = "lesson")
+	 @JsonManagedReference
 	private List<Reading> reading;
 	
 	@OneToMany(mappedBy = "lesson")
+	 @JsonManagedReference
 	private List<Vocabulary> vocabulary;
 	
 	@OneToMany(mappedBy = "lesson")
+	 @JsonManagedReference
 	private List<FillInTheBlank> fillInTheBlank;
 	
 	@Temporal(TemporalType.DATE)
